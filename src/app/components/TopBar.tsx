@@ -10,7 +10,7 @@ export default function TopBar() {
 
   const { collection, editor } = ctx;
 
-  // 🆕 New Document
+  //  New Document
   const handleNew = () => {
     if (!collection || !editor) return;
     const newDoc = collection.createDoc({ id: crypto.randomUUID() });
@@ -23,7 +23,7 @@ export default function TopBar() {
     editor.doc = newDoc;
   };
 
-  // 💾 Export snapshot
+  //  Export snapshot
   const handleSave = () => {
     if (!editor?.doc) return;
     const snapshot =
@@ -41,7 +41,7 @@ export default function TopBar() {
     URL.revokeObjectURL(url);
   };
 
-  // 📂 Import BlockSuite snapshot (.json)
+  //  Import BlockSuite snapshot (.json)
   const handleImport = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file || !collection || !editor) return;
@@ -58,7 +58,7 @@ export default function TopBar() {
     }
   };
 
-  // 📥 Load from localStorage
+  //  Load from localStorage
   const handleLoad = () => {
     try {
       const data = localStorage.getItem("extraSauce-doc");
@@ -72,7 +72,7 @@ export default function TopBar() {
     }
   };
 
-  // ✍️ Import Markdown (.md) — optional
+  //  Import Markdown (.md) — optional
   const handleImportMarkdown = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file || !collection || !editor) return;
