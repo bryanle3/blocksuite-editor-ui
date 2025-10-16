@@ -1,15 +1,13 @@
-# React Basic Next Example
+# 🧠 Extra Sauce Editor (BlockSuite + Next.js + shadcn/ui)
 
-This example encapsulates the BlockSuite editor and doc collection in React with Next.js, demonstrating basic document management.
+A collaborative markdown-style editor built with **Next.js 15**, **BlockSuite**, and **shadcn/ui**.  
+This version is based on the official `react-basic-next` BlockSuite example, customized with Extra Sauce styling and a cleaner UI.
 
-## Development
+---
 
-```sh
-git clone https://github.com/toeverything/blocksuite.git
-cd blocksuite/examples
+## 🚀 Getting Started
 
-pnpm install
-pnpm dev react-basic-next
-```
-
-This project is created using the `npx create-next-app@latest` cli.
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/<yourusername>/extra-sauce-editor.git
+cd extra-sauce-editor
