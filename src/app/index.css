@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Extra Saucy tokens */
+@layer base {
+  :root {
+    /* HEX → rgb */
+    --sauce-cream: 238 243 216;  /* #EEF3D8 */
+    --sauce-ink:   40 39 76;     /* #28274C */
+    --sauce-coral: 254 97 90;    /* #FE615A */
+    --sauce-teal:  33 104 105;   /* #216869 */
+    --sauce-mint:  73 160 120;   /* #49A078 */
+
+    /* shadcn semantic colors */
+    --background: var(--sauce-cream);
+    --foreground: 20 14 14;
+
+    --card:       255 255 255;
+    --card-foreground: 20 14 14;
+
+    --primary:    var(--sauce-ink);
+    --primary-foreground: 255 255 255;
+
+    --secondary:  235 240 228;
+    --secondary-foreground: 20 14 14;
+
+    --accent:     var(--sauce-coral);
+    --accent-foreground: 255 255 255;
+
+    --muted:      231 235 220;
+    --muted-foreground: 60 60 60;
+
+    --border:     210 210 210;
+    --input:      210 210 210;
+    --ring:       var(--sauce-teal);
+
+    --radius: 12px;
+  }
+
+  .dark {
+    --background: var(--sauce-ink);
+    --foreground: var(--sauce-cream);
+
+    --card:       34 38 66;
+    --card-foreground: var(--sauce-cream);
+
+    --primary:    var(--sauce-mint);
+    --primary-foreground: 16 24 20;
+
+    --secondary:  51 64 86;
+    --secondary-foreground: var(--sauce-cream);
+
+    --accent:     var(--sauce-coral);
+    --accent-foreground: 16 16 16;
+
+    --muted:      47 56 85;
+    --muted-foreground: 190 195 205;
+
+    --border:     62 69 100;
+    --input:      62 69 100;
+    --ring:       var(--sauce-mint);
+  }
+
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
+
+/* keep your existing rules below; tweak a bit for spacing */
+.app { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+.main-content { padding: 16px; }
+.sidebar { padding: 12px; }
+.sidebar .header { margin-bottom: 10px; font-weight: 600; opacity: .8; }
+.doc-list { display: flex; flex-direction: column; gap: 4px; }
+.doc-item { padding: 6px 8px; border-radius: 8px; cursor: pointer; }
+.doc-item:hover { background: rgb(var(--sauce-mint)/.12); }
+.doc-item.active { background: rgb(var(--sauce-mint)/.18); }
+.top-bar { display: flex; align-items: center; gap: 8px; }
+.editor-container { min-height: 60vh; border-radius: 12px; border: 1px solid rgb(var(--border)); background: #fff; }
